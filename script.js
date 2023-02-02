@@ -28,15 +28,21 @@ fetch("http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=97293
         console.log(firstCity.lon);
 
 
+
+        return fetch("https://api.openweathermap.org/data/2.5/forecast?lat=${firstCity.lat}&lon=${firstCity.lon}&cnt=3&appid=97293d61a13fbefe5d4d79ca9cd6558f")
+
     })
 
-fetch("https://api.openweathermap.org/data/2.5/forecast?lat=57&lon=-2.15&cnt=3&appid=97293d61a13fbefe5d4d79ca9cd6558f")
     .then(() => reponse.json())
     .then(data =>{
 
         console.log(data);
+
+
     })
 
+
+    // return fetch("https://api.openweathermap.org/data/2.5/forecast?lat=57&lon=-2.15&cnt=3&appid=97293d61a13fbefe5d4d79ca9cd6558f")
 
 
 
@@ -69,8 +75,6 @@ fetch("https://api.openweathermap.org/data/2.5/forecast?lat=57&lon=-2.15&cnt=3&a
 
 //focus on the functionaliy
 //get the buttons working with local storage and getting the data back.
-
-
 
 
 
