@@ -1,47 +1,35 @@
 
 
+
+fetch("http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=97293d61a13fbefe5d4d79ca9cd6558f")
+  .then(response => response.json())
+  .then(citiesFound => {
+    let firstCity = citiesFound[0];
+    
+    console.log(firstCity.lat);
+    console.log(firstCity.lon);
+  
+    return fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${firstCity.lat}&lon=${firstCity.lon}&appid=97293d61a13fbefe5d4d79ca9cd6558f`)
+  })
+  .then(response => response.json())
+  .then(firstCity => {
+    console.log(firstCity);
+  });
+
 // var APIKEY = "97293d61a13fbefe5d4d79ca9cd6558f";
-
 // var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=97293d61a13fbefe5d4d79ca9cd6558f";
-
 // api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
-
-
-// //You'll want to allow your application to accept user input and store it in the variable that you've created. You'll also likely need to specify state and country variables in your API call,
-
+// //You'll wantto allow your application to accept user input and store it in the variable that you've created. You'll also likely need to specify state and country variables in your API call,git 
 // var city;
-
-
 //put fetch inside of an event listener
 //My weather API key 840e2eedb61362e6a6b45816372f15b9
 
 // fetch(queryURL)
 //....
 
-fetch("http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=97293d61a13fbefe5d4d79ca9cd6558f")
-
-    .then(response => response.json())
-    .then(citiesFound => {
-        let firstCity = citiesFound[0];
-    
-        console.log(firstCity.lat);
-        console.log(firstCity.lon);
 
 
-
-        return fetch("https://api.openweathermap.org/data/2.5/forecast?lat=${firstCity.lat}&lon=${firstCity.lon}&cnt=3&appid=97293d61a13fbefe5d4d79ca9cd6558f")
-
-    })
-
-    .then(() => reponse.json())
-    .then(data =>{
-
-        console.log(data);
-
-
-    })
-
-
+//...
     // return fetch("https://api.openweathermap.org/data/2.5/forecast?lat=57&lon=-2.15&cnt=3&appid=97293d61a13fbefe5d4d79ca9cd6558f")
 
 
