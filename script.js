@@ -3,6 +3,8 @@
 const button = document.querySelector("button");
 
 button.addEventListener("click", function() {
+    let storedData = localStorage.getItem("weatherData");
+
 
 
     
@@ -21,6 +23,20 @@ button.addEventListener("click", function() {
       console.log(firstCity);
     });
 });
+
+
+
+
+
+//example below for local storage:
+// let search = {name: 'John', age: 30};
+// localStorage.setItem('object', JSON.stringify(object));
+
+// // Retrieve an object from localStorage
+// let storedObject = JSON.parse(localStorage.getItem('object'));
+// console.log(storedObject); // Output: { name: 'John', age: 30 }
+
+
 
 // var APIKEY = "97293d61a13fbefe5d4d79ca9cd6558f";
 // var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=97293d61a13fbefe5d4d79ca9cd6558f";
