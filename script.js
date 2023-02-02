@@ -1,20 +1,26 @@
+// Weather Report - Challenge 8
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", function() {
 
 
-
-fetch("http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=97293d61a13fbefe5d4d79ca9cd6558f")
-  .then(response => response.json())
-  .then(citiesFound => {
-    let firstCity = citiesFound[0];
     
-    console.log(firstCity.lat);
-    console.log(firstCity.lon);
-  
-    return fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${firstCity.lat}&lon=${firstCity.lon}&appid=97293d61a13fbefe5d4d79ca9cd6558f`)
-  })
+    fetch("http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=97293d61a13fbefe5d4d79ca9cd6558f")
+    .then(response => response.json())
+  .then(citiesFound => {
+      let firstCity = citiesFound[0];
+      
+      console.log(firstCity.lat);
+      console.log(firstCity.lon);
+      
+      return fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${firstCity.lat}&lon=${firstCity.lon}&appid=97293d61a13fbefe5d4d79ca9cd6558f`)
+    })
   .then(response => response.json())
   .then(firstCity => {
-    console.log(firstCity);
-  });
+      console.log(firstCity);
+    });
+});
 
 // var APIKEY = "97293d61a13fbefe5d4d79ca9cd6558f";
 // var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=97293d61a13fbefe5d4d79ca9cd6558f";
