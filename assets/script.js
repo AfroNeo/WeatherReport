@@ -43,7 +43,7 @@ console.log(!userInput=="")
 
 
 function getWeather(city) {
-  fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=97293d61a13fbefe5d4d79ca9cd6558f`)
+  fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=97293d61a13fbefe5d4d79ca9cd6558f`)
     .then(response => response.json())
     .then(citiesFound => {
       let firstCity = citiesFound[0];

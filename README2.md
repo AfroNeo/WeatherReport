@@ -17,9 +17,9 @@ We used bootstrap for the display elements and stored the data.
 However, looking at the code now, the display is for a matter of seconds.
 I plan to revisit this assignment. APIs can be very temperamental, especially the free ones.
 
-![Alt text](images/Weather-API-SS.PNG)
+![Weather location and temperature](images/Weather-API-SS.PNG)
 >
-![Alt text](images/Weather-API-console-log-ss.PNG)
+![Weather location and temperature including terminal of vs code](images/Weather-API-console-log-ss.PNG)
 
 
 
